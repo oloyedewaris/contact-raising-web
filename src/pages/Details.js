@@ -50,7 +50,7 @@ const Details = () => {
                     </div>
                   </div>
                   <div className='desc-block'>
-                    <img className='user-img' src={user.image} />
+                    <img alt='user' className='user-img' src={user.image} />
                   </div>
                 </div>
               </div>
