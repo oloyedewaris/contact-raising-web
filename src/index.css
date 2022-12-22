@@ -107,8 +107,22 @@ body {
   font-size: 30px;
 }
 
-/* @media screen and (max-width: 787px) {
-  .table {
-    width: 95%;
+@media screen and (max-width: 787px) {
+  .all-users {
+    font-weight: 600;
+    font-size: 20px;
   }
-} */
+
+  .first-row {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .user-img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100vh;
+    margin-right: 2rem;
+  }
+}
