@@ -41,16 +41,16 @@ const Details = () => {
                 <h2 style={{ textAlign: 'center' }}>Details and Location History</h2>
                 <div className='first-row'>
                   <div className='desc-block'>
-                    <div><span className='profile-description'>Name: </span>{user.name}</div>
-                    <div><span className='profile-description'>Email: </span>{user.email}</div>
-                    <div><span className='profile-description'>Date Registered: </span>{user.registeredAt}</div>
+                    <div><span className='profile-description'>Name: </span>{user?.name}</div>
+                    <div><span className='profile-description'>Email: </span>{user?.email}</div>
+                    <div><span className='profile-description'>Date Registered: </span>{user?.registeredAt}</div>
                     <div>
                       <span className='profile-description'>Last Visited Area: </span>
-                      {user.locationData[0].address.display_name}
+                      {user?.locationData[0]?.address?.display_name || 'Not available'}
                     </div>
                   </div>
                   <div className='desc-block'>
-                    <img alt='user' className='user-img' src={user.image} />
+                    <img alt='user' className='user-img' src={user?.image} />
                   </div>
                 </div>
               </div>
@@ -75,9 +75,9 @@ const Details = () => {
                       <td className="data-cell">{data?.location?.longitude || 'Not available'}</td>
                       <td className="data-cell">{data?.location?.latitude || 'Not available'}</td>
                       <td className="data-cell">{data?.address?.display_name || 'Not available'}</td>
-                      <td className="data-cell">{data?.address?.address.country || 'Not available'}</td>
-                      <td className="data-cell">{data?.address?.address.state || 'Not available'}</td>
-                      <td className="data-cell">{data?.address?.address.city || 'Not available'}</td>
+                      <td className="data-cell">{data?.address?.address?.country || 'Not available'}</td>
+                      <td className="data-cell">{data?.address?.address?.state || 'Not available'}</td>
+                      <td className="data-cell">{data?.address?.address?.city || 'Not available'}</td>
                       <td className="data-cell">{data?.location?.accuracy || 'Not available'}</td>
                     </tr>
                   ))}

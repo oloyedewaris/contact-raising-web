@@ -50,11 +50,11 @@ const Home = () => {
             {data.map((data, i) => (
               <tr key={i} className='data-row' onClick={() => history.push(`/details/${data._id}`)}>
                 <td className="data-cell">{i + 1}</td>
-                <td className="data-cell">{data.name}</td>
-                <td className="data-cell">{data.email}</td>
-                <td className="data-cell">{data.registeredAt}</td>
+                <td className="data-cell">{data?.name}</td>
+                <td className="data-cell">{data?.email}</td>
+                <td className="data-cell">{data?.registeredAt}</td>
                 <td className="data-cell">
-                  {data.locationData[data.locationData.length - 1].address.display_name}
+                  {data?.locationData[data?.locationData?.length - 1]?.address?.display_name}
                 </td>
               </tr>
             ))}
